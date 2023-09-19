@@ -1,0 +1,34 @@
+{
+    // LS config
+    "elixirLS.suggestSpecs": true,
+    "elixirLS.dialyzerEnabled": true,
+    "elixirLS.signatureAfterComplete": false,
+    "elixirLS.fetchDeps": false,
+
+    // Editor config
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "emmet.includeLanguages": {
+        "elixir": "html",
+        "html-eex": "html"
+    },
+    
+    // Icon theme config
+    "material-icon-theme.files.associations": {
+        ".erlang.cookie": "erlang"
+    },
+    "material-icon-theme.folders.associations": {
+        "deps": "private",
+        "*_html": "views",
+        "dashboard_web": "public",
+        
+        "bank_service": "dist",
+        "dashboard": "public",
+        "http_server": "api",
+        "exchange_service": "dist",
+        "stock_registry": "database",
+        "transport": "contract",
+        
+        "_build": "dist"
+    },
+}

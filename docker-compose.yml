@@ -1,0 +1,38 @@
+version: '3.7'
+
+services:
+  bank-service:
+    # hostname: bank-svc
+    networks:
+      - swift
+    build: 
+      context: .
+      dockerfile: ./apps/bank_service/Dockerfile
+
+  exchange-service:
+    # hostname: exch-svc
+    networks:
+      - swift
+    build: 
+      context: .
+      dockerfile: ./apps/exchange_service/Dockerfile
+
+  registry:
+    hostname: registry
+    networks:
+      - swift
+    build:
+      context: .
+      dockerfile: ./apps/stock_registry/Dockerfile
+
+  dashboard: 
+    networks:
+      - swift
+    ports:
+      - "4000:4000/tcp"
+    build:
+      context: .
+      dockerfile: ./apps/dashboard/Dockerfile
+
+networks:
+  swift:
